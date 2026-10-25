@@ -1,0 +1,141 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px 14px;
+  padding: 18px 20px;
+  background-color: var(--dark);
+  border-bottom: 1px solid var(--border);
+}
+
+label {
+  font-weight: 600;
+  color: var(--muted);
+}
+
+input, select {
+  padding: 9px 12px;
+  background: #1f1f1f;
+  color: var(--text);
+  border: 1px solid #333;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+}
+
+input:focus, select:focus {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(225, 11, 31, 0.25);
+}
+
+fa-icon {
+  color: var(--red-light);
+  cursor: pointer;
+}
+
+.count {
+  text-align: center;
+  color: var(--muted);
+  margin: 20px 0 0;
+}
+
+.cars-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 20px 30px 40px;
+}
+
+.auto-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.auto-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--red);
+  box-shadow: 0 10px 25px rgba(225, 11, 31, 0.25);
+}
+
+img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 10px;
+  background: var(--red);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.details {
+  flex: 1;
+  padding: 14px 16px 4px;
+}
+
+.details h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.details p {
+  margin: 0 0 8px;
+  line-height: 1.6;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.details .price {
+  color: var(--red-light);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.see-more {
+  padding: 8px 16px 16px;
+}
+
+button {
+  all: unset;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  background: var(--red);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: var(--red-dark);
+}
+
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--muted);
+  padding: 40px 0;
+}

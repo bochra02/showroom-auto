@@ -1,0 +1,29 @@
+<div class="page">
+  <a routerLink="/" class="back">Back to the showroom</a>
+
+  @if (car) {
+    <div class="car-page">
+      <img [src]="'images/' + car.photo" [alt]="car.model">
+
+      <div class="info">
+        <p class="brand">{{ car.brand }}</p>
+        <h2>{{ car.model }}</h2>
+        <p class="price">{{ car.price }} DNT</p>
+
+        <ul class="specs">
+          <li><span>Brand</span><strong>{{ car.brand }}</strong></li>
+          <li><span>Power</span><strong>{{ car.power }}</strong></li>
+          <li><span>In stock</span><strong>{{ car.availability }} unit(s)</strong></li>
+        </ul>
+
+        <p class="description">{{ car.description }}</p>
+
+        <button class="reserve" (click)="reserve()" [disabled]="car.availability === 0">
+          {{ car.availability === 0 ? 'Sold out' : 'Reserve this car' }}
+        </button>
+      </div>
+    </div>
+  } @else {
+    <p class="not-found">This car does not exist.</p>
+  }
+</div>
